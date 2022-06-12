@@ -1,0 +1,636 @@
+@import url('https://fonts.googleleapis.com/css2family=Nunito:wght@400;700&display=swap');
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: unset;
+    color: unset;
+    outline: unset;
+    border: unset;
+    font-family: Consolas, 'Courier New', monospace;
+    list-style: none;
+    text-decoration: none;
+}
+html, body {
+    scroll-behavior: smooth;
+}
+header {
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    max-width: 100%;
+    width: 100%;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+header div.openMenu, header div.closeMenu {
+    display: none;
+}
+header .brand {
+    font-size: 20px;
+}
+header .brand div.brand-name {
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+header .brand em.box {
+    background-color: #0e34a5;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 2vh;
+}
+header nav .mainMenu ul {
+    display: flex;
+}
+header nav .mainMenu ul li {
+    padding: 20px 10px 35px 10px;
+    height: 2rem;
+}
+header nav .mainMenu ul li:hover {
+    background: #3f62c9;
+    color: white;
+    width: auto;
+}
+header button.appointement-btn {
+    /* border: 2px solid red; */
+    border-radius: 2vh;
+    padding: 0 20px;
+    background: #0e34a5;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+}
+header button.mob-appointment-btn {
+    display: none;
+}
+main .fa-angle-down, footer .fa-angle-up {
+    border: 3px solid #0e34a5;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    padding: 0.5px 0;
+    font-size: 30px;
+    color: #0e34a5;
+    position: fixed;
+    cursor: pointer;
+    margin: 20px 0 0 1600px;
+}
+footer .fa-angle-up {
+    border: 3px solid white;
+    color: white;
+    margin: 400px 0 0 1600px;
+    position: absolute;
+}
+.container {
+    width: 100%;
+    min-width: 350px;
+    overflow: hidden;
+    background: whitesmoke;
+}
+.container .wrapper {
+    width: 300%;
+    min-height: 100%;
+    display: flex;
+    justify-content: space-between;
+    transition: 1s;
+}
+.container .slide-container .slide {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    /* flex-wrap: wrap; */
+    gap: 105px;
+    padding: 50px 9%;
+    padding-bottom: 70px;
+}
+.container .slide-container .slide .content {
+    flex: 1 1 350px;
+}
+.container .slide-container .slide .image {
+    flex: 1 1 450px;
+}
+.container .slide-container .slide .image img {
+    width: 100%;
+}
+.container .slide-container .slide .content h1 {
+    font-size: 45px;
+    color: #0e34a5;
+}
+.container .slide-container .slide .content p {
+    font-size: 16px;
+    color: #666;
+    padding: 10px 0;
+    line-height: 30px;
+}
+.container .slide-container .slide .content button.ui-ux-proj-btn {
+    background: #0e34a5;
+    color: white;
+    font-weight: 600;
+    padding: 15px 26px;
+    border-radius: 2vh;
+}
+.container .slide-container .slide .content button.graphics-proj-btn {
+    border: 3px solid #0e34a5;
+    color: #0e34a5;
+    border-radius: 2vh;
+    font-weight: 600;
+    padding: 15px 26px;
+}
+.container .slide-container .slide .content button.brand-proj-btn {
+    background: #0e34a5;
+    color: white;
+    font-weight: 600;
+    padding: 15px 26px;
+    border-radius: 2vh;
+}
+/* .container .slide-container {
+    display: none;
+}
+.container .slide-container.active {
+    display: block;
+} */
+.container .indicators {
+    text-align: center;
+    padding: 0 0 20px 0;
+}
+.container .indicators button {
+    background: none;
+    border: 3px solid #0e34a5;
+    outline: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 5px;
+    transition: .5s;
+}
+.container .indicators button.active {
+    width: 40px;
+    border-radius: 50px;
+    background-color: #0e34a5;
+}
+section#project {
+    background: white;
+    margin: 70px 0;
+    /* padding: 0 100px; */
+    text-align: center;
+}
+section#project h1 {
+    text-align: center;
+    color: #0e34a5;
+    font-size: 45px;
+    padding: 40px 0;
+}
+section#project .project-container .project-row1, section#project .project-container .project-row2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* padding: 20px 0; */
+}
+section#project .project-container .project-row1 .project-content img, 
+section#project .project-container .project-row2 .project-content img {
+    /* width: 350px;
+    height: 200px; */
+    margin: 20px;
+}
+img.special {
+    height: 173px;
+    width: 300px;
+    padding: 0;
+    bottom: 0;
+}
+img.over {
+    width: 300px;
+    height: 173px;
+}
+section#project .project-container .project-row1 .project-content .tag, 
+section#project .project-container .project-row2 .tag {
+    display: flex;
+    top: 0;
+    margin: -10px 20px 0 20px;
+}
+section#project .project-container .project-row1 .project-content .tag span, 
+section#project .project-container .project-row2 .tag span {
+    margin-right: 100px;
+    background: #0e34a5;
+    color: white;
+    padding: 3px 2px;
+}
+.tag span i {
+    font-size: 13px;
+}
+section#project .project-container button.short-gallery {
+    border: 3px solid #0e34a5;
+    color: #0e34a5;
+    font-size: 20px;
+    padding: 15px;
+    margin-top: 40px;
+}
+section#service {
+    background: whitesmoke;
+    margin: 70px 0;
+    text-align: center;
+    padding: 10px 30px 100px 30px;
+}
+section#service h1 {
+    text-align: center;
+    color: #0e34a5;
+    font-size: 45px;
+    padding: 40px 0;
+}
+section#service .service-container {
+    display: flex;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    justify-content: space-between;
+}
+section#service .service-container .service-content {
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+                inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+                -0,5px -0.5px 0px rgba(255, 255, 255, 1),
+                0.5px p.5px 0px rgba(0, 0, 0, 0.15),
+                0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    margin: 10px 20px;
+    background-color: white;
+}
+section#service .service-container .service-content i {
+    font-size: 50px;
+    color: #0e34a5;
+    padding: 20px;
+}
+section#service .service-container .service-content h3 {
+    color: #0e34a5;
+    font-size: 25px;
+    padding: 10px 0;
+}
+section#service .service-container .service-content p {
+    line-height: 30px;
+}
+section#gallery {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section#gallery h1 {
+    color: #0e34a5;
+    font-size: 45px;
+    padding: 20px 0;
+}
+section#gallery h4 {
+    font-style: italic;
+    padding: 10px 0 40px 0;
+    color: #3f62c9;
+}
+section#gallery .gallery-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+section#gallery .gallery-content .image-detail {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+section#gallery .gallery-content .image-detail img:hover {
+    opacity: 0.5;
+}
+section#gallery .gallery-content .image-detail span {
+    background: #666;
+    color: white;
+    padding: 5px;
+    margin: 10px 0;
+}
+section#testimonial {
+    background: whitesmoke;
+    /* margin: 70px 0; */
+    /* padding: 0 100px; */
+    color: #3b82f6;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+section#testimonial h1 {
+    text-align: center;
+    color: #0e34a5;
+    font-size: 45px;
+    padding: 40px 0;
+}
+section#testimonial .container {
+    /* padding: 0 70px; */
+    width: 800px;
+    overflow: hidden;
+    min-width: 350px;
+}
+section#testimonial .container .wrapper {
+    width: 400%;
+    display: flex;
+    justify-content: space-between;
+    transition: 1s;
+}
+section#testimonial .container .wrapper .sliderow  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section#testimonial .container .wrapper .sliderow .slidecol {
+    width: 350px;
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(0, 0, 0, 0.15);
+    /* background-color: #3b82f6; */
+    color: black;
+    width: 70%;
+    padding: 20px;
+    border-radius: 2vh;
+    overflow: hidden;
+}
+section#testimonial .container .wrapper .sliderow .slidecol .testimonial-image {
+    float: right;
+}
+section#testimonial .container .wrapper .sliderow .slidecol .testimonial-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    float: right;
+}
+section#testimonial .container .wrapper .sliderow .slidecol .review p {
+    line-height: 40px;
+    width: auto;
+    text-align: justify;
+}
+section#testimonial .container .wrapper .sliderow .slidecol pre {
+    display: inline-flex;
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: #0e34a5;
+}
+section#testimonial .container .wrapper .sliderow .slidecol .review span.name {
+    font-size: 25px;
+    color: #0e34a5;
+    font-weight: 700;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+section#testimonial .container .wrapper .sliderow .slidecol .review div.work-place {
+    margin-top: 10px;
+    font-style: italic;
+}
+section#testimonial .switch-btn {
+    margin: 20px 0;
+}
+section#testimonial .switch-btn button {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    box-shadow: none;
+    padding: 0;
+    margin: 5px;
+    border: 2px solid #0e34a5;
+    background: none;
+    transition: 1s;
+}
+section#testimonial .switch-btn button.active {
+    width: 40px;
+    background: #0e34a5;
+}
+section#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section#about h1 {
+    color: #0e34a5;
+    font-size: 45px;
+    text-align: center;
+}
+section#about .about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section#about .about-container div {
+    margin: 0 60px;
+}
+section#about .about-container .my-image-private-social {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+}
+section#about .about-container .my-image-private-social .fsquare-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #0e34a5;
+    margin-top: 10px;
+    text-align: center;
+    padding: 100px 0;
+    color: white;
+}
+section#about .about-container .my-image-private-social .private-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section#about .about-container .my-image-private-social .private-social i {
+    margin: 20px 10px;
+    font-size: 23px;
+    cursor: pointer;
+}
+section#about .about-container .my-image-private-social .private-social i.fa-facebook {
+    color: blue;
+}
+section#about .about-container .my-image-private-social .private-social i.fa-twitter {
+    color: dodgerblue;
+}
+section#about .about-container .my-image-private-social .private-social i.fa-instagram {
+    color: deeppink;
+}
+section#about .about-container .my-image-private-social .private-social i.fa-whatsapp {
+    color: darkgreen;
+}
+section#about .about-container .name-detail div{
+    margin: 20px 0;
+}
+section#about .about-container .name-detail .cv-download {
+    background: #0e34a5;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+section#about .question {
+    border: 3px solid #0e34a5;
+    border-radius: 3vh;
+    width: fit-content;
+    padding: 50px 100px;
+}
+section#about .question span {
+    color: #0e34a5;
+    font-size: 25px;
+}
+section#about .question button.know-more, section#about .question button.contact-me {
+    margin: 20px 40px 0 30px;
+    background: #0e34a5;
+    color: white;
+    padding: 20px;
+    font-size: 17px
+}
+section#contact {
+    background: whitesmoke;
+    margin: 50px 0;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section#contact h1 {
+    color: #0e34a5;
+    text-align: center;
+    font-size: 45px;
+}
+section#contact .contact-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+section#contact .contact-row div {
+    margin: 0 50px;
+}
+section#contact .contact-row .mail {
+    display: flex;
+    flex-direction: column;
+}
+section#contact .contact-row .mail #email {
+    border: 3px solid #0e34a5;
+    padding: 20px;
+    width: 330px;
+    font-size: 16px;
+}
+section#contact .contact-row .mail .message {
+    width: 400px;
+    height: 300px;
+    border: 3px solid #0e34a5;
+    margin: 20px 0;
+    padding: 20px;
+    line-height: 30px;
+    outline: none;
+    overflow-y: hidden;
+}
+div:empty::before {
+    color: grey;
+    cursor: text;
+}
+div[data-placeholder]:not([data-placeholder=""]):empty::before {
+    content: attr(data-placeholder);
+}
+section#contact .contact-row .mail .send-social {
+    margin: 0 6px;
+    font-size: 20px;
+    cursor: pointer;
+}
+section#contact .contact-row .mail .send-social i.fa-facebook {
+    color: blue;
+}
+section#contact .contact-row .mail .send-social i.fa-twitter {
+    color: dodgerblue;
+}
+section#contact .contact-row .mail .send-social i.fa-instagram {
+    color: deeppink;
+}
+section#contact .contact-row .mail .send-social i.fa-github {
+    color: orangered;
+} 
+section#contact .contact-row .mail .send-social button.send-btn {
+    margin-left: 190px;
+    cursor: pointer;
+    background: #0e34a5;
+    color: white;
+    padding: 15px;
+}
+section#contact .contact-row .location {
+    display: flex;
+    flex-direction: column;
+}
+section#contact .contact-row .location .map {
+    width: 400px;
+    height: 380px;
+    background: #3f62c9;
+} 
+section#contact .contact-row .location .smart-contact {
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section#contact .contact-row .location .smart-contact .fa-whatsapp {
+    color: green;
+    font-size: 20px;
+}
+section#contact .contact-row .location .smart-contact .fa-envelope {
+    color: red;
+    font-size: 20px;
+    margin-left: 30px;
+}
+footer {
+    background: #0e34a5;
+    color: white;
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer .for-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+footer .for-footer div {
+    margin: 20px;
+}
+footer .for-footer .more-about, footer .for-footer .contact-me {
+    width: 600px;
+}
+footer .for-footer .more-about h3, footer .for-footer .contact-me h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+footer .for-footer .more-about p, footer .for-footer .contact-me p {
+    line-height: 30px;
+}
+footer .phone {
+    background-color: white;
+    color: #0e34a5;
+    padding: 20px;
+    width: fit-content;
+    font-size: 20px;
+    font-weight: 700;
+}
+footer .footer-media i {
+    margin: 30px 10px;
+    font-size: 20px;
+}
